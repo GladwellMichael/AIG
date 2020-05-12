@@ -1,2 +1,2 @@
 # AIG
-Artificial Intelligence and Graphics
+Artificial Intelligence and Computer Graphics
