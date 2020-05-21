@@ -23,13 +23,19 @@ CSV.read("bank-additional-full.csv")
 #This will read the file and return it as it is from the csv file (without specific columns)
 readlines("bank-additional-full.csv")
 
-#This will create a DataFrame called df and return the result
+#This will create a DataFrame called df and return the DataFrame
 df = CSV.read("bank-additional-full.csv") |> DataFrame
 
-#Check for consistencies with the column names
+#Check for inconsistencies with the column names
 first(df, 15)
 
-#Check the names of all the columns and check for inconsistency
+#Check the names of all the columns and check for inconsistencies
 names(df)
 
+##-- DATA CLEANING --##
+#1. Remove duplicate data
+#2. Remove data with unknowns or rows with missing data
+#3. Check if each column affects the required output or decision 
+#4. Remove unnecessary columns in the dataset that do not help in archieving our goal
+#5. change the data types to use only the datatypes usable with the linear regression model
 
