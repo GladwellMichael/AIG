@@ -152,6 +152,13 @@ function predict(xx)
     #multiplying the X-test sample with updated theta
     for i in 1:(size(xx)[1])
         probability[i]= hypothesis(theta*X[i, :])
+        
+        #deciding the threshold
+        if(probability[i]< 0.5)
+            probability[i]=0
+            else
+                probability[i]=1
+            end
     end
 
     return probability
